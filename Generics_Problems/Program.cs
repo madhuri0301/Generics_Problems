@@ -3,10 +3,13 @@
 namespace Generics_Problems
 {
     class Program
-    {
+    { 
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome To The Generics Problems");
+            ThreeVariablesMaximumNumber maxnumber = new ThreeVariablesMaximumNumber();
+            int maxintnumber = maxnumber.checkMaximumNum(10, 20, 35);  // Passing Input's
+            Console.WriteLine(maxintnumber);
         }
+
     }
 }
