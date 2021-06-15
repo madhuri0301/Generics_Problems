@@ -33,5 +33,18 @@ namespace Generics_Problems
             }
             return max;
         }
+        public string checkMaximumNum(string x, string y, string z) //passing parameters 
+        {
+            string max = x;
+            if (y.CompareTo(max) > 0)
+            {
+                max = y; // y is largest
+            }
+            if (z.CompareTo(max) > 0)
+            {
+                max = z; // z is largest
+            }
+            return max;
+        }
     }
 }

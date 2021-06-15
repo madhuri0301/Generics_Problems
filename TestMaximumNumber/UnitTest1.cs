@@ -43,5 +43,23 @@ namespace TestMaximumNumber
             float maximumResult = maximum.checkMaximumNum(1.2f, 2.3f, 3.5f);
             AssertionException.Equals(3.5f, maximumResult);
         }
+        [Test]
+        public void Given_Max_String_Number_at_1st_Position_return_the_Same_Number()
+        {
+            string maximumResult = maximum.checkMaximumNum("Apple", "Banana", "Strawberry");
+            AssertionException.Equals("Apple", maximumResult);
+        }
+        [Test]
+        public void Given_Max_String_Number_at_2nd_Position_return_the_Same_Number()
+        {
+            string maximumResult = maximum.checkMaximumNum("Apple", "Banana", "Strawberry");
+            AssertionException.Equals("Banana", maximumResult);
+        }
+        [Test]
+        public void Given_Max_String_Number_at_3rd_Position_return_the_Same_Number()
+        {
+            string maximumResult = maximum.checkMaximumNum("Apple", "Banana", "Strawberry");
+            AssertionException.Equals("Strawberry", maximumResult);
+        }
     }
 }
