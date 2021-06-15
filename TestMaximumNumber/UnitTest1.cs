@@ -1,13 +1,11 @@
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Generics_Problems;
 namespace TestMaximumNumber
 {
     public class Tests
     {
         ThreeVariablesMaximumNumber maximum = new ThreeVariablesMaximumNumber();
+        //Test Cases For Integer Number
         [Test]
         public void Given_Max_Number_at_1st_Position_return_the_Same_Number()
         {
@@ -26,6 +24,24 @@ namespace TestMaximumNumber
             int maximumResult = maximum.checkMaximumNum(3, 4, 5);
             AssertionException.Equals(5, maximumResult);
         }
-
+        //Test Cases For Float Value
+        [Test]
+        public void Given_Max_Float_Number_at_1st_Position_return_the_Same_Number()
+        {
+            float maximumResult = maximum.checkMaximumNum(1.2f, 2.3f, 3.5f);
+            AssertionException.Equals(1.2f, maximumResult);
+        }
+        [Test]
+        public void Given_Max_Float_Number_at_2nd_Position_return_the_Same_Number()
+        {
+            float maximumResult = maximum.checkMaximumNum(1.2f, 2.3f, 3.5f);
+            AssertionException.Equals(2.3f, maximumResult);
+        }
+        [Test]
+        public void Given_Max_Float_Number_at_3rd_Position_return_the_Same_Number()
+        {
+            float maximumResult = maximum.checkMaximumNum(1.2f, 2.3f, 3.5f);
+            AssertionException.Equals(3.5f, maximumResult);
+        }
     }
 }
