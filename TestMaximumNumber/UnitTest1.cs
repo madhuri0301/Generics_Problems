@@ -4,6 +4,7 @@ namespace TestMaximumNumber
 {
     public class Tests
     {
+
         ThreeVariablesMaximumNumber maximum = new ThreeVariablesMaximumNumber();
         //Test Cases For Integer Number
         [Test]
@@ -61,5 +62,36 @@ namespace TestMaximumNumber
             string maximumResult = maximum.checkMaximumNum("Apple", "Banana", "Strawberry");
             AssertionException.Equals("Strawberry", maximumResult);
         }
+        [Test]
+        public void GivenIntegerArray_ShouldReturnLargestInteger()
+        {
+            int[] values = { 10, 20, 35, 26, 16 };
+            GenericMaximum<int> maximumNumber = new GenericMaximum<int>(values);
+
+            int max = maximumNumber.MaxValue();
+
+            Assert.AreEqual(35, max);
+        }
+        [Test]
+        public void GivenFloatArray_ShouldReturnLargestFloat()
+        {
+            float[] values = { 1.2f, 2.3f, 3.5f, 2.1f, 1.6f };
+            GenericMaximum<float> maximumNumber = new GenericMaximum<float>(values);
+
+            float max = maximumNumber.MaxValue();
+
+            Assert.AreEqual(3.5f, max);
+        }
+        [Test]
+        public void GivenStringArray_ShouldReturnLargestString()
+        {
+            string[] values = { "Apple", "Banana", "Strawberry", "WaterMelon", "Mango" };
+            GenericMaximum<string> maximumNumber = new GenericMaximum<string>(values);
+
+            string max = maximumNumber.MaxValue();
+
+            Assert.AreEqual("WaterMelon", max);
+        }
+
     }
 }

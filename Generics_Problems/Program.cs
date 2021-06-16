@@ -6,17 +6,16 @@ namespace Generics_Problems
     {
         static void Main(string[] args)
         {
-            ThreeVariablesMaximumNumber maxnumber = new ThreeVariablesMaximumNumber(); //Class and it's Method
 
-            int maxintnumber = maxnumber.checkMaximumNum(10, 20, 35);  // Passing Input's
-            Console.WriteLine(maxintnumber);
-
-            float maxfloatnumber = maxnumber.checkMaximumNum(1.2f, 2.3f, 3.5f);  // Passing Input's
-            Console.WriteLine(maxfloatnumber);
-
-            string maxstring = maxnumber.checkMaximumNum("Apple","Banana","Strawberry");  // Passing Input's
-            Console.WriteLine(maxstring);
+            int[] intArray = { 10,20,35,26,16 };
+            GenericMaximum<int> generic = new GenericMaximum<int>(intArray);
+            Console.WriteLine(generic.MaxValue());
+            float[] floatArray = { 1.2f, 2.3f, 3.5f,2.1f,1.6f };
+            GenericMaximum<float> genericFloat = new GenericMaximum<float>(floatArray);
+            Console.WriteLine(genericFloat.MaxValue());
+            string[] stringArray = { "Apple", "Banana", "Strawberry","WaterMelon","Mango" };
+            GenericMaximum<string> genericString = new GenericMaximum<string>(stringArray);
+            Console.WriteLine(genericString.MaxValue());
         }
-
     }
 }
