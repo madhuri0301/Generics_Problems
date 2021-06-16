@@ -28,7 +28,11 @@ namespace Generics_Problems
 
             return sortedArray[sortedArray.Length - 1];
         }
-
+        public void PrintMax()
+        {
+            T[] sortedArray = Sort(this.array);
+            Console.WriteLine(sortedArray[sortedArray.Length - 1]);
+        }
     }
 
 }
